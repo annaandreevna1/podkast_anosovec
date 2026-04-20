@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 import HomePage from "./components/HomePage";
 import PodcastDetailPage from "./components/PodcastDetailPage";
 import RegistrationPage from "./components/RegistrationPage";
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/analytics" element={<AnalyticsPage />} />
         </Routes>
       </HashRouter>
+      <Analytics />
     </AuthProvider>
   );
 }
